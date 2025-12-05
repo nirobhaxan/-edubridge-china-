@@ -1,0 +1,197 @@
+body {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for premium feel */
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    color: #16213e; /* Deep navy */
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Subtle gradient background */
+    overflow-x: hidden;
+}
+header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); /* Luxurious dark gradient */
+    color: #feca57; /* Gold text */
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+}
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+header p {
+    font-size: 1.4em;
+    margin: 20px 0;
+    font-style: italic;
+    color: #ff9f43; /* Warm gold */
+}
+.hero {
+    background-image: url('https://source.unsplash.com/featured/?china,university');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 26, 46, 0.8); /* Dark overlay for elegance */
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+.hero button {
+    background: linear-gradient(135deg, #feca57, #ff9f43); /* Gold gradient */
+    color: #16213e;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(254, 202, 87, 0.4);
+}
+.hero button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(254, 202, 87, 0.6);
+}
+section {
+    padding: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.service {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    border-top: 8px solid #feca57; /* Gold border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.testimonials {
+    background: linear-gradient(135deg, #bdc3c7 0%, #95a5a6 100%); /* Elegant gray */
+    color: #16213e;
+}
+.testimonial {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.testimonial:hover {
+    transform: scale(1.05);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+input, textarea {
+    margin: 15px 0;
+    padding: 15px;
+    border: 2px solid #bdc3c7;
+    border-radius: 10px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+input:focus, textarea:focus {
+    border-color: #feca57;
+    outline: none;
+}
+button[type="submit"] {
+    background: linear-gradient(135deg, #feca57, #ff9f43);
+    color: #16213e;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(254, 202, 87, 0.4);
+}
+footer {
+    background: #1a1a2e;
+    color: #feca57;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+}
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.contact-icons a {
+    margin: 0 20px;
+    color: #feca57;
+    font-size: 2.5em;
+    transition: all 0.3s ease;
+}
+.contact-icons a:hover {
+    color: #ff9f43;
+    transform: scale(1.2);
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero h2 { font-size: 2em; }
+    .contact-icons { flex-direction: column; }
+}
